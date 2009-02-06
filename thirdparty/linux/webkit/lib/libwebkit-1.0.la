@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' /usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../lib/libcurl.la -L/usr/lib /usr/lib/libgthread-2.0.la /usr/lib/libgtk-x11-2.0.la /usr/lib/libgdk-x11-2.0.la /usr/lib/libatk-1.0.la /usr/lib/libgdk_pixbuf-2.0.la /usr/lib/libpangocairo-1.0.la /usr/lib/libgio-2.0.la -lXt -lSM -lICE /usr/lib/libcurl.la /usr/lib/libidn.la -lldap -lrt -lkrb5 -lk5crypto -lcom_err -lgssapi_krb5 -lssl -lcrypto -L/home/martin/app/titanium/kroll/thirdparty/linux/libcurl/lib /usr/lib/libcairo.la -lfreetype -lpixman-1 -lxcb-render-util -lxcb-render -lxcb -lXrender -lX11 /usr/lib/libpangoft2-1.0.la /usr/lib/libpango-1.0.la /usr/lib/libgobject-2.0.la /usr/lib/libgmodule-2.0.la /usr/lib/libglib-2.0.la -lfontconfig /usr/lib/libfreetype.la -lz -licui18n -licuuc -licudata /usr/lib/libsqlite3.la -ldl /usr/lib/libxslt.la /usr/lib/libxml2.la /usr/lib/libjpeg.la -lpng12 -lpthread'
+dependency_libs=' -L/usr/lib /usr/lib/libgthread-2.0.la /usr/lib/libgtk-x11-2.0.la /usr/lib/libgdk-x11-2.0.la /usr/lib/libatk-1.0.la /usr/lib/libgdk_pixbuf-2.0.la /usr/lib/libpangocairo-1.0.la /usr/lib/libgio-2.0.la -lXt -lSM -lICE /usr/lib/libcurl.la /usr/lib/libidn.la -lldap -lrt -lkrb5 -lk5crypto -lcom_err -lgssapi_krb5 -lssl -lcrypto /usr/lib/libcairo.la -lfreetype -lpixman-1 -lxcb-render-util -lxcb-render -lxcb -lXrender -lX11 /usr/lib/libpangoft2-1.0.la /usr/lib/libpango-1.0.la /usr/lib/libgobject-2.0.la /usr/lib/libgmodule-2.0.la /usr/lib/libglib-2.0.la -lfontconfig /usr/lib/libfreetype.la -lz -licui18n -licuuc -licudata /usr/lib/libsqlite3.la -ldl /usr/lib/libxslt.la /usr/lib/libxml2.la /usr/lib/libjpeg.la -lpng12 -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -28,7 +28,7 @@ age=0
 revision=0
 
 # Is this an already installed library?
-installed=no
+installed=yes
 
 # Should we warn about portability when linking against -modules?
 shouldnotlink=no
