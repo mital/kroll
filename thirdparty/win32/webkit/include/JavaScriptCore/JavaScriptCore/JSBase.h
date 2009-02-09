@@ -72,7 +72,7 @@ typedef struct OpaqueJSValue* JSObjectRef;
      * TODO: Export symbols with JS_EXPORT when using MSVC.
      * See http://bugs.webkit.org/show_bug.cgi?id=16227
      */
-	#define JS_EXPORT
+    #define JS_EXPORT
 #else
     #define JS_EXPORT
 #endif
