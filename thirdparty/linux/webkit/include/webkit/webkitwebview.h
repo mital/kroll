@@ -77,6 +77,10 @@ struct _WebKitWebViewClass {
     WebKitNavigationResponse   (* navigation_requested)   (WebKitWebView        *web_view,
                                                            WebKitWebFrame       *frame,
                                                            WebKitNetworkRequest *request);
+    WebKitNavigationResponse   (* new_window_navigation_requested)   (WebKitWebView        *web_view,
+                                                                      WebKitWebFrame       *frame,
+                                                                      WebKitNetworkRequest *request,
+                                                                      gchar *frame_name);
     void                       (* window_object_cleared)  (WebKitWebView        *web_view,
                                                            WebKitWebFrame       *frame,
                                                            JSGlobalContextRef    context,
@@ -282,7 +286,7 @@ WEBKIT_API void
 webkit_web_view_set_full_content_zoom           (WebKitWebView        *web_view,
                                                  gboolean              full_content_zoom);
 
-void webkit_web_view_register_url_scheme_as_local(const gchar* scheme);
+WEBKIT_API void webkit_web_view_register_url_scheme_as_local(const gchar* scheme);
 
 G_END_DECLS
 
