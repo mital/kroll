@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+import os, inspect, os.path as path
+import distutils.dir_util as dirutil
+
+Import('build')
+if build.is_linux():
+	SConscript('linux/Sconscript')
+
