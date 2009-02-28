@@ -1,9 +1,10 @@
-import os, inspect, os.path as path
+import os, inspect, os.path as path, utils
 Import('build')
 
-libs = [
- 'webkit/lib',
- 'poco/lib',
- 'libicu/lib'
-]
-build.env.CopyDir(path.join(build.dir,'runtime'), libs)
+e = build.env
+rtdir = path.join(build.dir, 'runtime')
+utils.SCopyTree(e, 'webkit/lib', rtdir)
+utils.SCopyTree(e, 'poco/lib', rtdir)
+utils.SCopyTree(e, 'libicu/lib', rtdir)
+utils.SCopyTree(e, 'libcurl/lib', rtdir)
+

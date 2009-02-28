@@ -3,6 +3,9 @@ import os, inspect, os.path as path
 import distutils.dir_util as dirutil
 
 Import('build')
-if build.is_linux():
+if build.is_linux() and build.arch == '64':
+	SConscript('linux64/Sconscript')
+
+elif build.is_linux():
 	SConscript('linux/Sconscript')
 
