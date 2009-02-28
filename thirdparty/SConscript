@@ -6,6 +6,5 @@ Import('build')
 if build.is_linux() and build.arch == '64':
 	SConscript('linux64/Sconscript')
 
-elif build.is_linux():
-	SConscript('linux/Sconscript')
-
+else:
+	SConscript(path.join(build.os, 'Sconscript'))
