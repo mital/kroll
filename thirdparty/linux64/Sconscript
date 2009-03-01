@@ -2,8 +2,8 @@ import os, inspect, os.path as path, utils
 Import('build')
 
 rtdir = path.join(build.dir, 'runtime')
-build.utils.SCopyTree('webkit/lib', rtdir)
-build.utils.SCopyTree('poco/lib', rtdir)
-build.utils.SCopyTree('libicu/lib', rtdir)
-build.utils.SCopyTree('libcurl/lib', rtdir)
+build.utils.CopyTree('webkit/lib', rtdir)
+build.utils.CopyTree('poco/lib', rtdir)
+build.utils.CopyTree('libicu/lib', rtdir)
+build.utils.CopyTree('libcurl/lib', rtdir)
 
