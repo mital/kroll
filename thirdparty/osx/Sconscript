@@ -1,0 +1,10 @@
+import os, inspect, os.path as path, utils
+Import('build')
+
+rtdir = path.join(build.dir, 'runtime')
+for framework in Glob('*/*.framework'):
+	build.utils.CopyToDir(framework, rtdir)
+
+for libdir in Glob('*/lib'):
+	build.utils.CopyTree(libdir, rtdir)
+
