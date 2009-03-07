@@ -1,2 +1,8 @@
 import os, inspect, os.path as path, utils
 Import('build')
+
+rtdir = path.join(build.dir, 'runtime')
+build.utils.CopyTree(path.join('poco', 'bin'), rtdir)
+build.utils.CopyTree(path.join('webkit', 'bin'), rtdir)
+build.utils.CopyToDir(path.join('microsoft', 'Microsoft.VC80.CRT'), rtdir)
+

@@ -287,6 +287,7 @@ webkit_web_view_set_full_content_zoom           (WebKitWebView        *web_view,
                                                  gboolean              full_content_zoom);
 
 WEBKIT_API void webkit_web_view_register_url_scheme_as_local(const gchar* scheme);
+WEBKIT_API const gchar* webkit_web_view_get_user_agent(GObject* object);
 
 G_END_DECLS
 
