@@ -129,11 +129,13 @@ public:
 	bool operator >  (const UUID& uuid) const;
 	bool operator >= (const UUID& uuid) const;
 	
-	bool isNil() const;
+	//JGH: nil is a reserved keyword in Objective-C and causes problems with some headers included
+	//bool isNil() const;
 		/// Returns true iff the UUID is nil (in other words,
 		/// consists of all zeros).
 
-	static const UUID& nil();
+
+      /// static const UUID& nil();
 		/// Returns a nil UUID.
 
 	static const UUID& dns();
@@ -214,11 +216,13 @@ inline UUID::Version UUID::version() const
 	return Version(_timeHiAndVersion >> 12);
 }
 
+/*
 
 inline bool UUID::isNil() const
 {
 	return compare(nil()) == 0;
 }
+*/
 
 
 inline void swap(UUID& u1, UUID& u2)
