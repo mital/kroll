@@ -8,3 +8,4 @@ for framework in Glob('*/*.framework'):
 for libdir in Glob('*/lib'):
 	build.utils.CopyTree(libdir, rtdir)
 
+
