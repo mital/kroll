@@ -174,7 +174,7 @@
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 57 "/cygdrive/c/Users/Marshall/Code/WEBKIT~1/WebCore/css/CSSGrammar.y"
+#line 57 "/cygdrive/c/Code/WEBKIT~1/WebCore/css/CSSGrammar.y"
 {
     bool boolean;
     char character;
