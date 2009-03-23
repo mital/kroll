@@ -2,10 +2,11 @@ import os, inspect, os.path as path, utils
 Import('build')
 
 rtdir = build.runtime_build_dir
+excludes = ['.h', '.defs', 'JavaScriptGlue.framework']
 for framework in Glob('*/*.framework'):
-	build.utils.CopyToDir(framework, rtdir)
+	build.utils.CopyToDir(framework, rtdir, exclude=excludes)
 
 for libdir in Glob('*/lib'):
-	build.utils.CopyTree(libdir, rtdir)
+	build.utils.CopyTree(libdir, rtdir, exclude=excludes)
 
 
