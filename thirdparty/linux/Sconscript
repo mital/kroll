@@ -1,7 +1,7 @@
 import os, inspect, os.path as path, utils
 Import('build')
 
-rtdir = path.join(build.dir, 'runtime')
+rtdir = build.runtime_build_dir
 build.utils.CopyTree('webkit/lib', rtdir)
 build.utils.CopyTree('poco/lib', rtdir)
 build.utils.CopyTree('libicu/lib', rtdir)
