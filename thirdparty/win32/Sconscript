@@ -1,8 +1,8 @@
-import os, inspect, os.path as path, utils
+import os, inspect, os.path as path, futils
 Import('build')
 
 rtdir = build.runtime_build_dir
-build.utils.CopyTree(path.join('poco', 'bin'), rtdir)
-build.utils.CopyTree(path.join('webkit', 'bin'), rtdir)
-build.utils.CopyToDir(path.join('microsoft', 'Microsoft.VC80.CRT'), rtdir)
+futils.CopyTree(path.join('poco', 'bin'), rtdir)
+futils.CopyTree(path.join('webkit', 'bin'), rtdir)
+futils.CopyToDir(path.join('microsoft', 'Microsoft.VC80.CRT'), rtdir)
 

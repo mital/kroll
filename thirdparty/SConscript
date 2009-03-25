@@ -3,8 +3,11 @@ import os, inspect, os.path as path
 import distutils.dir_util as dirutil
 
 Import('build')
-if build.is_linux() and build.arch == '64':
-	SConscript('linux64/Sconscript')
-
-else:
-	SConscript(path.join(build.os, 'Sconscript'))
+print "Copying thirdparty resources...",
+SConscript('osx/Sconscript')
+#kif build.is_linux() and build.arch == '64':
+#k	SConscript('linux64/Sconscript')
+#k
+#kelse:
+#k	SConscript(path.join(build.os, 'Sconscript'))
+print "done"
